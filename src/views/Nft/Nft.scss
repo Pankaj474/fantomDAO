@@ -1,0 +1,23 @@
+#nft-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .nft_img {
+    margin-bottom: -1rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+  }
+  .nft-img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .nft-card {
+    width: 950px;
+    z-index: 1;
+  }
+}

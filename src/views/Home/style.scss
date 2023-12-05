@@ -1,0 +1,199 @@
+#home-view {
+  .heading {
+    // text-shadow: 1px 1px 4px #000, 1px 1px 12px #000;
+    margin-bottom: 16px;
+  }
+
+  .MuiAccordion-root {
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      backdrop-filter: blur(6px);
+    }
+  }
+  .actions {
+    button {
+      max-height: 42px;
+      height: 42px;
+      padding-left: 56px;
+      padding-right: 56px;
+
+      &:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .left-side {
+    max-width: 800px;
+    min-height: calc(100vh - 200px);
+    position: relative;
+    z-index: 2;
+
+    & > div {
+      // margin-top: -4rem;
+    }
+
+    .video {
+      position: relative;
+      width: 100%;
+      margin-bottom: 24px;
+      // overflow: hidden;
+      padding-top: 56.25%;
+      .responsive-iframe {
+        position: absolute;
+
+        z-index: -100;
+      }
+
+      &::before {
+        content: url(../../assets/images/video-img-top.png);
+        position: absolute;
+        right: -110px;
+        top: -100px;
+        z-index: 2;
+        transform: scale(0.6);
+      }
+    }
+
+    .desc {
+      padding: 1rem 0 2rem;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 50px;
+      li {
+        margin-bottom: 1rem;
+        list-style-image: url("../../assets/images/list-style-image.png");
+        // text-shadow: 1px 1px 4px #000;
+
+        h6 {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .ohm-card {
+    max-width: unset !important;
+    width: 100%;
+    margin: auto;
+    max-height: 355px;
+    .card-header {
+      margin-bottom: 1rem;
+    }
+    &.ohm-chart-card {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+      padding-bottom: 60px !important;
+      .chart-card-header {
+        padding: 0px 20px !important;
+        min-width: 300px;
+      }
+      height: 355px;
+    }
+  }
+
+  .right-side {
+    position: relative;
+    z-index: 2;
+    .actions {
+      button {
+        border-radius: 999px !important;
+      }
+    }
+
+    .game-countdown {
+      // text-shadow: 1px 1px 4px #000, 1px 1px 12px #000, 1px 1px 20px #000;
+      text-align: center;
+    }
+
+    .game-countdown {
+      padding-top: 1rem;
+
+      span {
+        display: inline-block;
+        // width: 130px;
+        text-align: right;
+        margin-right: 12px;
+        word-break: keep-all;
+        white-space: nowrap;
+
+        &:last-child {
+          margin-right: 0;
+          width: 80px;
+        }
+      }
+    }
+  }
+
+  .grid-view {
+    position: relative;
+    z-index: 2;
+    .MuiGrid-item {
+      padding: 15px 24px;
+      & > div {
+        background: #fff;
+        padding: 22px 20px;
+        border-radius: 10px;
+        text-align: left;
+      }
+      span {
+        color: #5e6e99;
+        font-weight: 700;
+      }
+      h4 {
+        font-weight: 800;
+      }
+    }
+  }
+
+  .dashboard-img {
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.mobile {
+  #home-view {
+    .left-side {
+      min-height: unset !important;
+      .actions {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .right-side {
+      .game-countdown {
+        font-size: 0.8rem;
+        span {
+          width: 60px;
+          margin-right: 8px;
+          &:last-child {
+            margin-right: 0;
+            width: 40px;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.tablet {
+  #home-view {
+    .right-side {
+      .game-countdown {
+        span {
+          font-size: 1.4rem !important;
+          margin-right: 8px;
+          &:last-child {
+            margin-right: 0;
+            width: 40px;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

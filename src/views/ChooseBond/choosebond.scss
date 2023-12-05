@@ -1,0 +1,245 @@
+#choose-bond-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 2rem;
+
+  .bond-img {
+    position: fixed;
+    z-index: 0;
+    bottom: 0;
+    right: 0;
+    width: 350px;
+  }
+
+  .ohm-card {
+    position: relative;
+    z-index: 2;
+    .bond-hero {
+      h3 {
+        padding: 6px 12px;
+        width: 100%;
+        font-weight: 700;
+      }
+
+      span {
+        margin: auto;
+      }
+    }
+  }
+
+  .claim-bonds-card {
+    .global-claim-buttons {
+      width: 100%;
+      margin: 15px 0px;
+      button {
+        max-width: 233px;
+      }
+    }
+    .small.global-claim-buttons {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      button {
+        max-width: unset;
+        width: 90%;
+      }
+    }
+  }
+
+  .bond-data-card {
+    margin: auto;
+    .ohm-pairs {
+      display: flex;
+      margin-right: 15px;
+    }
+    .bond-pair {
+      display: flex !important;
+      align-items: center;
+      justify-content: left;
+      margin-bottom: 15px;
+      .MuiBox-root {
+        margin-right: 10px;
+      }
+      .bond-name {
+        svg {
+          margin-left: 5px;
+          vertical-align: middle;
+          font-size: 15px;
+        }
+      }
+    }
+    .data-row {
+      margin-bottom: 13px;
+
+      .bond-price {
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 5px;
+        }
+      }
+    }
+    .bond-link {
+      margin-top: 10px;
+      text-align: center;
+      a {
+        width: 96%;
+      }
+    }
+  }
+
+  .currency-icon {
+    display: inline-block;
+    min-width: 15px;
+  }
+
+  .MuiTable-root {
+    margin: 10px 0px;
+  }
+
+  .claim-bond-card-buttons {
+    flex-wrap: wrap;
+    width: 100%;
+    button {
+      min-width: 48%;
+      margin: 5px 0px;
+    }
+  }
+
+  .MuiTableCell-root {
+    font-weight: 600;
+    p {
+      margin: 0 !important;
+      display: flex !important;
+      align-items: center;
+      // justify-content: flex-start;
+      white-space: nowrap;
+      img {
+        margin-right: 3px;
+      }
+    }
+  }
+
+  .MuiTableBody-root .MuiTableRow-root .MuiTableCell-alignLeft.bond-name-cell {
+    justify-content: space-between;
+    display: flex;
+    div.bond-name {
+      width: 60%;
+      margin-left: 5px !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      align-items: flex-start;
+      p {
+        margin-bottom: unset !important;
+        line-height: 140% !important;
+        color: var(--color-gold);
+      }
+      a {
+        p {
+          font-size: 0.8rem;
+          opacity: 0.8;
+        }
+      }
+      svg {
+        margin-left: 3px !important;
+        font-size: 1.2em !important;
+      }
+    }
+  }
+
+  .referral-card {
+    background-color: rgba($color: #000, $alpha: 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    img {
+      margin-right: 1rem;
+      height: 8rem;
+    }
+
+    h5 {
+      font-weight: 800;
+    }
+
+    &__address {
+      display: flex;
+      align-items: center;
+      a {
+        padding-right: 1rem;
+        text-align: right;
+        padding-top: 0.1rem;
+      }
+    }
+    .white--text {
+      color: #fff;
+      margin-bottom: 0;
+      width: 100%;
+    }
+  }
+
+  .referral-card__pc {
+    display: block;
+  }
+  .referral-card__mobile {
+    display: none;
+  }
+}
+
+.tablet #choose-bond-view {
+  .claim-bond-card-buttons {
+    button {
+      width: 40%;
+    }
+  }
+}
+
+.mobile {
+  #choose-bond-view {
+    .claim-bond-card-buttons {
+      flex-direction: column;
+      button {
+        width: 100%;
+      }
+    }
+
+    .referral-card {
+      margin-top: 2rem;
+    }
+
+    .ohm-card-container {
+      width: 100%;
+    }
+    .referral-card__pc {
+      display: none;
+    }
+    .referral-card__mobile {
+      display: block;
+      margin-top: 0;
+      padding: 1rem;
+      p {
+        margin: 0;
+      }
+      img {
+        height: 5rem;
+      }
+      .referral-card__address {
+        width: 100%;
+        a {
+          width: 100%;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

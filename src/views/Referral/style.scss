@@ -1,0 +1,97 @@
+.referral-view {
+    .coins-bg-img {
+        width: 3rem;
+        margin-right: 12px;
+    }
+    .ohm-card {
+        padding: 0 !important;
+        border: unset !important;
+        background: unset !important;
+        backdrop-filter: unset !important;
+        border-radius: 0 !important;
+    }
+    .referral-grid-view {
+        overflow: auto !important;
+
+        .card {
+            border: 2px solid #f2f1f1;
+            background-color: rgb(0 1 1 / 70%);
+            border-radius: 20px;
+            padding: 20px;
+            @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+                backdrop-filter: blur(6px);
+            }
+
+            .MuiPaper-root {
+                background-color: unset !important;
+            }
+
+            &-header {
+                text-transform: uppercase;
+                font-weight: 700;
+                position: relative;
+                display: inline;
+
+                &::before {
+                    content: "";
+                    height: 2px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: -3px;
+                    background-color: #ccc;
+                }
+            }
+        }
+
+        .ReactVirtualized__Table__headerColumn,
+        .ReactVirtualized__Table__rowColumn {
+            flex: 1;
+        }
+        .ReactVirtualized__Table__headerColumn {
+            .MuiTableCell-head {
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+        .ReactVirtualized__Table__row {
+            .ReactVirtualized__Table__rowColumn {
+                &:first-child .MuiTableCell-body {
+                    padding-left: 0;
+                }
+                &:last-child .MuiTableCell-body {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    .loading {
+        cursor: progress;
+    }
+}
+
+.mobile {
+    .referral-view {
+        .ohm-card {
+            height: 100% !important;
+            max-height: unset !important;
+            margin: 0 !important;
+            padding-top: 60px !important;
+        }
+        .referral-grid-view {
+            height: calc(100vh - 100px) !important;
+            width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            left: 0;
+            top: 110px;
+            position: fixed;
+            padding-bottom: 2rem;
+        }
+    }
+}
